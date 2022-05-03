@@ -4,17 +4,12 @@ This is a solution to the [REST Countries API with color theme switcher challeng
 
 [DEMO](https://countries-flags-redux.vercel.app)
 
-"dependencies": {
-    "axios": "^0.22.0",
-    "lodash.throttle": "^4.1.1",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2",
-    "react-icons": "^4.3.1",
-    "react-redux": "^7.2.6",
-    "react-router-dom": "^6.2.1",
-    "react-scripts": "^5.0.0",
-    "react-select": "^5.1.0",
-    "redux": "^4.1.2",
-    "redux-thunk": "^2.4.1",
-    "styled-components": "^5.3.1"
-}
+### Dependencies:
+- axios
+- lodash.throttle
+- react-icons
+- redux
+- router
+- react-select
+- redux-thunk
+- styled-components
