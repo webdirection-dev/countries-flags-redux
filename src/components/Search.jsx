@@ -31,10 +31,10 @@ const Input = styled.input.attrs({
 `;
 
 export const Search = ({ search, setSearch }) => {
-  return (
-    <InputContainer>
-      <IoSearch />
-      <Input onChange={(e) => setSearch(e.target.value)} value={search}/>
-    </InputContainer>
-  );
+    return (
+        <InputContainer>
+            <IoSearch />
+            <Input onChange={(e) => setSearch(e.target.value)} value={search}/>
+        </InputContainer>
+    );
 };

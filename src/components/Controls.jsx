@@ -25,17 +25,19 @@ const Wrapper = styled.div`
 `;
 
 export const Controls = () => {
-  return (
-    <Wrapper>
-      <Search />
-      <CustomSelect
-        options={options}
-        placeholder="Filter by Region"
-        isClearable
-        isSearchable={false}
-        value={''}
-        onChange={() => {}}
-      />
-    </Wrapper>
-  );
+    return (
+        <Wrapper>
+            <Search />
+
+            <CustomSelect
+                options={options}
+                placeholder="Filter by Region"
+                isClearable
+                isSearchable={false}
+                value={''}
+                onChange={() => {}}
+            />
+
+        </Wrapper>
+    );
 };

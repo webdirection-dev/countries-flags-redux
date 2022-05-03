@@ -7,6 +7,13 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
@@ -50,6 +57,7 @@
       <updated>1651517355698</updated>
       <workItem from="1651517356902" duration="837000" />
       <workItem from="1651518203400" duration="150000" />
+      <workItem from="1651580446743" duration="11998000" />
     </task>
     <servers />
   </component>

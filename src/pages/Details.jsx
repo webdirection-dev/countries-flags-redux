@@ -6,17 +6,17 @@ import { Info } from '../components/Info';
 
 
 export const Details = () => {
-  const { name } = useParams();
-  const navigate = useNavigate();
+    const { name } = useParams();
+    const navigate = useNavigate();
 
-  const currentCountry = null;
+    const currentCountry = null;
 
-  return (
-    <div>
-      <Button onClick={() => navigate(-1)}>
-        <IoArrowBack /> Back
-      </Button>
-      {currentCountry && <Info push={navigate} {...currentCountry} />}
-    </div>
-  );
+    return (
+        <div>
+            <Button onClick={() => navigate(-1)}>
+                <IoArrowBack /> Back
+            </Button>
+            {currentCountry && <Info push={navigate} {...currentCountry} />}
+        </div>
+    );
 };
