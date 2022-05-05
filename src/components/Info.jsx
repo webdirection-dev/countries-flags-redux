@@ -1,4 +1,9 @@
+import {useSelector, useDispatch} from "react-redux";
+import {loadNeighborsByBorders} from "../store/details/details-actions";
+import {selectNeighbors} from "../store/details/details-selectors";
+
 import styled from 'styled-components';
+import {useEffect} from "react";
 
 const Wrapper = styled.section`
   margin-top: 3rem;
@@ -102,12 +107,20 @@ export const Info = (props) => {
         push,
     } = props;
 
+    const dispatch = useDispatch()
+    const neighbors = useSelector(selectNeighbors)
+
+    useEffect(() => {
+        if (borders.length) dispatch(loadNeighborsByBorders(borders))
+    }, [borders, dispatch])
+
     return (
         <Wrapper>
             <InfoImage src={flag} alt={name} />
 
             <div>
                 <InfoTitle>{name}</InfoTitle>
+
                 <ListGroup>
                     <List>
                         <ListItem>
@@ -126,6 +139,7 @@ export const Info = (props) => {
                             <b>Capital:</b> {capital}
                         </ListItem>
                     </List>
+
                     <List>
                         <ListItem>
                             <b>Top Level Domain</b>{' '}
@@ -147,15 +161,17 @@ export const Info = (props) => {
                         </ListItem>
                     </List>
                 </ListGroup>
+
                 <Meta>
                     <b>Border Countries</b>
+
                     {!borders.length ? (
                         <span>There is no border countries</span>
                     ) : (
                         <TagGroup>
-                            {[].map((b) => (
-                                <Tag key={b} onClick={() => push(`/country/${b}`)}>
-                                    {b}
+                            {neighbors.map((countryName) => (
+                                <Tag key={countryName} onClick={() => push(`/country/${countryName}`)}>
+                                    {countryName}
                                 </Tag>
                             ))}
                         </TagGroup>

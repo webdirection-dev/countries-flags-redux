@@ -5,6 +5,7 @@ This is a solution to the [REST Countries API with color theme switcher challeng
 [DEMO](https://countries-flags-redux.vercel.app)
 
 ### Dependencies:
+- redux-persist
 - axios
 - lodash.throttle
 - react-icons

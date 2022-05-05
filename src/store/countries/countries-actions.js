@@ -1,6 +1,6 @@
-export const SET_COUNTRIES = '@@country/SET_COUNTRIES'
-export const SET_LOADING = '@@country/SET_LOADING'
-export const SET_ERROR = '@@country/SET_ERROR'
+export const SET_COUNTRIES = '@@countries/SET_COUNTRIES'
+export const SET_LOADING = '@@countries/SET_LOADING'
+export const SET_ERROR = '@@countries/SET_ERROR'
 
 const setCountries = (countries) => ({
     type: SET_COUNTRIES,
