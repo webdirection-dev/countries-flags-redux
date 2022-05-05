@@ -1,7 +1,8 @@
 import {useEffect} from "react";
 import { useNavigate } from 'react-router-dom';
 import {useSelector, useDispatch} from "react-redux";
-import {selectAllCountries, selectCountriesInfo} from "../store/countries/countries-selectors";
+import {selectCountriesInfo, selectVisibleCountries} from "../store/countries/countries-selectors";
+import {selectControls} from "../store/controls/controls-selectors";
 
 import { List } from '../components/List';
 import { Card } from '../components/Card';
@@ -12,8 +13,9 @@ export const HomePage = () => {
     const navigate = useNavigate();
 
     const dispatch = useDispatch()
-    const countries = useSelector(state => selectAllCountries(state));
-    const {status, error, qty} = useSelector(selectCountriesInfo);
+    const {search, region} = useSelector(selectControls)
+    const countries = useSelector(state => selectVisibleCountries(state, {search, region}))
+    const {status, error, qty} = useSelector(selectCountriesInfo)
 
     useEffect(() => {
         if (!qty) dispatch(loadCountries())

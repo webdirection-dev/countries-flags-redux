@@ -1,4 +1,5 @@
 import {useSelector, useDispatch} from "react-redux";
+import {clearControls} from "../store/controls/controls-actions";
 import {setTheme} from "../store/theme/theme-actions";
 
 import styled from 'styled-components';
@@ -48,7 +49,9 @@ export const Header = () => {
         <HeaderEl>
             <Container>
                 <Wrapper>
-                    <Title>Where is the world?</Title>
+                    <Title
+                        onClick={() => dispatch(clearControls())}
+                    >Where is the world?</Title>
                     <ModeSwitcher
                         onClick={() => dispatch(setTheme(theme === 'light' ? 'dark' : 'light'))}
                     >
